@@ -64,9 +64,6 @@ Content-Type: application/json
   "rating": 0.0
 }
 ```
-
-> A média (`rating`) é sempre calculada no momento do cadastro, mesmo sem avaliações - resultando em `0.0` quando a lista de notas está vazia.
-
 ---
 
 ### 4.2. Listar todos os destinos
@@ -263,16 +260,16 @@ _(sem corpo de resposta)_
 
 ## 6. Resumo dos endpoints
 
-| Método | Endpoint                                  | Ação                                            | Status de sucesso |
-| ------ | ----------------------------------------- | ----------------------------------------------- | ----------------- |
-| POST   | `/destinations`                           | Cadastrar destino                               | 201               |
-| GET    | `/destinations`                           | Listar todos os destinos                        | 200               |
-| GET    | `/destinations/search/name?name=`         | Pesquisar por nome                              | 200               |
-| GET    | `/destinations/search/location?location=` | Pesquisar por localização                       | 200               |
-| GET    | `/destinations/{id}`                      | Detalhar destino                                | 200               |
-| PUT    | `/destinations/{id}`                      | Atualizar destino                               | 200               |
-| POST   | `/destinations/{id}/ratings`              | Registrar avaliação (corpo: `{"rating": nota}`) | 200               |
-| DELETE | `/destinations/{id}`                      | Excluir destino                                 | 204               |
+| Método | Endpoint| Ação|
+| ------ | ------- | --- |
+| POST   | `/destinations` | Cadastrar destino |
+| GET    | `/destinations` | Listar todos os destinos |
+| GET    | `/destinations/search/name?name=` | Pesquisar por nome |
+| GET    | `/destinations/search/location?location=` | Pesquisar por localização | 
+| GET    | `/destinations/{id}` | Detalhar destino |
+| PUT    | `/destinations/{id}` | Atualizar destino | 
+| POST   | `/destinations/{id}/ratings` | Registrar avaliação |
+| DELETE | `/destinations/{id}` | Excluir destino |
 
 ## 7. Instruções de execução
 
