@@ -42,7 +42,7 @@ public class DestinationService {
         return destination;
     }
 
-    public Destination addRating(Long id, Integer rating) {
+    public Destination addDestinationRating(Long id, Integer rating) {
         Destination destination = destinationRepository.findById(id);
         destination.getRatings().add(rating);
         destination.setRating(calculateAverage(destination.getRatings()));

@@ -56,8 +56,8 @@ public class DestinationController {
     }
 
     @PostMapping("/{id}/ratings")
-    public ResponseEntity<Destination> addRating(@PathVariable Long id, @RequestBody RatingRequest request) {
-        return new ResponseEntity<>(destinationService.addRating(id, request.getRating()), HttpStatus.OK);
+    public ResponseEntity<Destination> addDestinationRating(@PathVariable Long id, @RequestBody RatingRequest request) {
+        return new ResponseEntity<>(destinationService.addDestinationRating(id, request.getRating()), HttpStatus.OK);
     }
 
     @DeleteMapping("/{id}")
